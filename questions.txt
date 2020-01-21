@@ -1,0 +1,32 @@
+0.  It is the longest word at 45 characters and what we set our max to.
+
+1.  It returns resource usage measures of a given source.
+
+2.  There are sixteen members.
+
+3.  Passing by reference uses less memory.
+
+4.      Main creates an array of chars of size 45 + 1 to store the current word being read.
+    An index is set to 0 to traverse the array. It looks at the first character in the file 
+    and if it is a letter or an apostrophe, if the index is greater than 0, it adds it to 
+    word[index] and increments index. If the index is now greater than the max word length 
+    it cycles through chars while the current char is not EOF and is a letter and set index
+    to 0 to start new word.
+        If the current char is a digit, cycle through chars while the current char is not 
+    EOF and is a letter or digit and set index to 0.
+        If the current char has not met any of these conditions then we must have a whole
+    word so if the index is greater than 0 we add /0 to the end of the string to signify 
+    such. We update our found words counter. We mark the current time to test and pass the 
+    word to the spellcheck function and mark the current time once its done. Store the time
+    it took in avariable. If the word is misspelled we report it and increment the misspelling 
+    counter.
+        Finally we set the index back to 0 and repeat the whole process for every word in the 
+    file.
+    
+5.      If only fscanf was used it would be more difficult to check that the strings don't contain 
+    numbers or are too long.
+6.  Because the values won't be changing. Or to make it harder for me, I'm not sure any more.
+7.  I used an array of nodes with fields for a word, full flag, next pointer.
+8.  Pretty slow
+9.  None
+10. I'm not sure
